@@ -162,7 +162,7 @@ def run_gui() -> int:
             self.input_kind = tk.StringVar(value="file")
             self.input_path = tk.StringVar()
             self.output_dir = tk.StringVar()
-            self.mode = tk.StringVar(value="去白边(dehalo)")
+            self.mode = tk.StringVar(value="强力去除(dehalo)")
             self.threshold = tk.IntVar(value=245)
             self.suffix = tk.StringVar(value="_nobg")
             self.running = False
@@ -209,7 +209,7 @@ def run_gui() -> int:
             mode_combo = ttk.Combobox(
                 row4,
                 textvariable=self.mode,
-                values=["去白边(dehalo)", "仅纯白(strict)", "近白色(near)"],
+                values=["强力去除(dehalo)", "仅纯白(strict)", "近白色(near)"],
                 state="readonly",
                 width=16,
             )
@@ -229,7 +229,7 @@ def run_gui() -> int:
             self.start_btn.pack(side="left")
 
             help_text = (
-                "模式说明: dehalo=去白边(推荐), strict=仅删纯白, near=删除近白。"
+                "模式说明: dehalo=强力去除（推荐）, strict=仅删纯白, near=删除近白。"
             )
             ttk.Label(row5, text=help_text).pack(side="left", padx=(12, 0))
 
