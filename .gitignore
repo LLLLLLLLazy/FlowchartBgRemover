@@ -1,0 +1,5 @@
+﻿build/
+dist/
+transparent_out/
+*.spec
+__pycache__/
